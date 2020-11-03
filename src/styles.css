@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.row{
+  margin-right: unset!important;
+  margin-left: unset!important;
+}
+
+.margin-top{
+  margin-top: 15px;
+}
+
+.container-d{
+  margin-top: 15px;
+}
+
+.margin-bottom{
+  margin-bottom: 15px;
+}
+
+.card{
+  background-color: #dedede;
+}
+
+body{
+  background-color: #bfbfbf;
+}
