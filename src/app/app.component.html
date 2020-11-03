@@ -1,34 +1,124 @@
 <div class="container-d">
   <div class="row">
     <div class="col-md-12 margin-bottom">
-      <div class="card">
+      <div class="card titlecard">
         <div class="row">
           <div class="col-md-12">
-            <h4 style="margin-bottom: 0">Simulador de redes EON con multiples nucleos</h4>
-            <h5>Desfragmentador</h5>
+            <h5 class="margin-top" style="margin-bottom: 0">Simulador de redes EON con multiples nucleos</h5>
+            <h6>Desfragmentación basada en machine learning</h6>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <div class="card">
         <div class="row">
           <div class="col-md-12">
-            <h4>Opciones</h4>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Tiempo de simulación</span>
+              </div>
+              <input type="text" class="form-control">
+            </div>
+            <div class="row">
+              <div class="col-md-6 no-padding">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Topología</span>
+                  </div>
+                  <select class="form-control">
+                    <option>NSFNet</option>
+                    <option>ARPA-2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 padding-left">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Ancho FS (Ghz)</span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-12 no-padding">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Capacidad (FS's por enlace)</span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <span class="divisoria"></span>
+              <div class="col-md-6 no-padding">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Tráfico máximo (Erlang)</span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 padding-left">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Lambda</span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-2 no-padding">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">FS Rango</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 padding-left">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Min</span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-3 padding-left">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Max</span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 no-padding">
+                <div class="input-group margin-top">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Ruteo</span>
+                  </div>
+                  <select class="form-control">
+                    <option>NSFNet</option>
+                    <option>ARPA-2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 padding-left">
+                <button type="button" class="btn btn-des margin-top">Simular</button>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="card margin-top">
         <div class="row">
           <div class="col-md-12">
-            <h4>Bloqueos</h4>
+            <h5 class="margin-top">Resultados</h5>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-8" style="padding-left:0">
       <div class="card">
         <div class="row">
           <div class="col-md-12">
-            <h4>Gráficos </h4>
+            <h5 class="margin-top">Gráficos </h5>
           </div>
         </div>
       </div>

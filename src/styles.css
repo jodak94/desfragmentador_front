@@ -5,7 +5,7 @@
 }
 
 .margin-top{
-  margin-top: 15px;
+  margin-top: .5rem;
 }
 
 .container-d{
@@ -17,9 +17,44 @@
 }
 
 .card{
-  background-color: #dedede;
+  background-color: #EEEEEE;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  color: #3C4858;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.input-group-text{
+  font-size: 0.75rem!important;
+}
+
+.form-control{
+  font-size: 0.75rem!important;
+}
+
+.titlecard{
+  background-color: #999999;
+  color: white;
+}
+
+.no-padding{
+  padding: 0;
+}
+
+.padding-left{
+  padding: 0 0 0 15px;
 }
 
 body{
-  background-color: #bfbfbf;
+  background-color: #EEEEEE;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+.btn-des{
+  color: #fff;
+  border: 1px solid #ced4da;
+  background-color: #999999!important;
+  font-size: 0.75rem!important;
+  float: right;
 }
