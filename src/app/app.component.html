@@ -4,8 +4,8 @@
       <div class="card titlecard">
         <div class="row">
           <div class="col-md-12">
-            <h5 class="margin-top" style="margin-bottom: 0">Simulador de redes EON con multiples nucleos</h5>
-            <h6>Desfragmentación basada en machine learning</h6>
+            <h5 class="margin-top" style="margin-bottom: 0">Simulador de redes EON con multiples núcleos</h5>
+            <h6>Desfragmentación basada en Machine learning</h6>
           </div>
         </div>
       </div>
@@ -106,10 +106,32 @@
           </div>
         </div>
       </div>
-      <div class="card margin-top">
+      <div class="card margin-top resultados-card">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-4">
             <h5 class="margin-top">Resultados</h5>
+          </div>
+          <div class="col-md-8 margin-top no-padding padding-right subtittle">
+            <span class="right">Total Demandas: xx Total Bloqueos: xx</span>
+          </div>
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Tiempo</th>
+                  <th scope="col">Dem</th>
+                  <th scope="col">Bloq</th>
+                  <th scope="col">Entropía</th>
+                  <th scope="col">MSI</th>
+                  <th scope="col">BFR</th>
+                  <th scope="col">LP</th>
+                  <th scope="col">PC</th>
+                  <th scope="col">E/U</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -118,7 +140,22 @@
       <div class="card">
         <div class="row">
           <div class="col-md-12">
-            <h5 class="margin-top">Gráficos </h5>
+            <div id="chartEntropia" class="chart-container"></div>
+          </div>
+          <div class="col-md-12">
+            <div id="chartMsi" class="chart-container"></div>
+          </div>
+          <div class="col-md-12">
+            <div id="chartBFR" class="chart-container"></div>
+          </div>
+          <div class="col-md-12">
+            <div id="chartLightPaths" class="chart-container"></div>
+          </div>
+          <div class="col-md-12">
+            <div id="chartPathConEntropia" class="chart-container"></div>
+          </div>
+          <div class="col-md-12">
+            <div id="chartEntUso" class="chart-container"></div>
           </div>
         </div>
       </div>
