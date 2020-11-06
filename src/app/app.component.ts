@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import * as CanvasJS from '../assets/canvasjs.min';
+import { Options } from './models/options';
+import { SimuladorService } from './services/simulador.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +10,40 @@ import * as CanvasJS from '../assets/canvasjs.min';
 })
 export class AppComponent {
   title = 'app';
+  options = null;
+
+  constructor(private simuladorService: SimuladorService) {}
 
   ngOnInit() {
-  	let dataPoints = [];
+    this.initOptions();
+  }
+
+  initOptions(){
+    this.options = new Options();
+    this.options.time = 1000;
+    this.options.topology = "NSFNet";
+    this.options.fswidth = 12.5;
+    this.options.capacity = 350;
+    this.options.erlang = 100;
+    this.options.lambda = 5;
+    this.options.fsrangemin = 2;
+    this.options.fsrangemax = 8;
+  }
+
+  simular(){
+    this.simuladorService.simular(this.options)
+    .toPromise().then(
+      res => {
+        this.draw(res)
+      }
+    );
+  }
+
+  draw(res){
+    let dataPoints = [];
     let bloqueos = [];
   	let y = 0;
     bloqueos = [{x:50, y: 0.05}, {x:125, y: 0.05}, {x:250, y: 0.05}, {x:400, y: 0.05}, {x:450, y: 0.05}];
-    console.log(bloqueos)
 
     for (var i = 0; i < 1000; i += 1) {
     	y += Math.round(Math.random() * 10 - 5);
@@ -22,7 +52,6 @@ export class AppComponent {
     		y: y
     	});
     }
-    console.log(dataPoints)
     this.createChart(dataPoints, bloqueos, "chartEntropia", 'Entropía', '#a84032')
     y = 0;
     dataPoints = [];

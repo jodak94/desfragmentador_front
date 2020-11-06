@@ -11,14 +11,14 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card">
+      <div class="card" *ngIf="options">
         <div class="row">
           <div class="col-md-12">
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">Tiempo de simulación</span>
               </div>
-              <input type="text" class="form-control">
+              <input [(ngModel)]="options.time" type="text" class="form-control">
             </div>
             <div class="row">
               <div class="col-md-6 no-padding">
@@ -26,7 +26,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Topología</span>
                   </div>
-                  <select class="form-control">
+                  <select class="form-control" [(ngModel)]="options.topology">
                     <option>NSFNet</option>
                     <option>ARPA-2</option>
                   </select>
@@ -37,7 +37,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Ancho FS (Ghz)</span>
                   </div>
-                  <input type="text" class="form-control">
+                  <input [(ngModel)]="options.fswidth" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-12 no-padding">
@@ -45,7 +45,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Capacidad (FS's por enlace)</span>
                   </div>
-                  <input type="text" class="form-control">
+                  <input [(ngModel)]="options.capacity" type="text" class="form-control">
                 </div>
               </div>
               <span class="divisoria"></span>
@@ -54,7 +54,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Tráfico máximo (Erlang)</span>
                   </div>
-                  <input type="text" class="form-control">
+                  <input [(ngModel)]="options.erlang" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-6 padding-left">
@@ -62,7 +62,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Lambda</span>
                   </div>
-                  <input type="text" class="form-control">
+                  <input [(ngModel)]="options.lambda" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-2 no-padding">
@@ -77,7 +77,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Min</span>
                   </div>
-                  <input type="text" class="form-control">
+                  <input [(ngModel)]="options.fsrangemin" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-3 padding-left">
@@ -85,7 +85,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Max</span>
                   </div>
-                  <input type="text" class="form-control">
+                  <input [(ngModel)]="options.fsrangemax" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-6 no-padding">
@@ -100,7 +100,7 @@
                 </div>
               </div>
               <div class="col-md-6 padding-left">
-                <button type="button" class="btn btn-des margin-top">Simular</button>
+                <button type="button" class="btn btn-des margin-top" (click)="simular()">Simular</button>
               </div>
             </div>
           </div>
