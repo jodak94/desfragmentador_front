@@ -22,12 +22,13 @@ export class AppComponent {
     this.options = new Options();
     this.options.time = 1000;
     this.options.topology = "NSFNet";
-    this.options.fswidth = 12.5;
+    this.options.fsWidth = 12.5;
     this.options.capacity = 350;
     this.options.erlang = 100;
     this.options.lambda = 5;
-    this.options.fsrangemin = 2;
-    this.options.fsrangemax = 8;
+    this.options.fsRangeMin = 2;
+    this.options.fsRangeMax = 8;
+    this.options.routingAlg = "fa";
   }
 
   simular(){

@@ -37,7 +37,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Ancho FS (Ghz)</span>
                   </div>
-                  <input [(ngModel)]="options.fswidth" type="text" class="form-control">
+                  <input [(ngModel)]="options.fsWidth" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-12 no-padding">
@@ -77,7 +77,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Min</span>
                   </div>
-                  <input [(ngModel)]="options.fsrangemin" type="text" class="form-control">
+                  <input [(ngModel)]="options.fsRangeMin" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-3 padding-left">
@@ -85,7 +85,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Max</span>
                   </div>
-                  <input [(ngModel)]="options.fsrangemax" type="text" class="form-control">
+                  <input [(ngModel)]="options.fsRangeMax" type="text" class="form-control">
                 </div>
               </div>
               <div class="col-md-6 no-padding">
@@ -93,9 +93,10 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">Ruteo</span>
                   </div>
-                  <select class="form-control">
-                    <option>NSFNet</option>
-                    <option>ARPA-2</option>
+                  <select [(ngModel)]="options.routingAlg" class="form-control">
+                    <option value="fa">FA</option>
+                    <option value="faca">FA-CA</option>
+                    <option value="mtlsc">MTLSC</option>
                   </select>
                 </div>
               </div>

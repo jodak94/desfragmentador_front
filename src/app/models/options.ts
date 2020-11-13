@@ -1,10 +1,11 @@
 export class Options {
     time: number;
     topology: string;
-    fswidth: number;
+    fsWidth: number;
     capacity: number;
     erlang: number;
     lambda: number;
-    fsrangemin: number;
-    fsrangemax: number
+    fsRangeMin: number;
+    fsRangeMax: number
+    routingAlg: string;
 }
